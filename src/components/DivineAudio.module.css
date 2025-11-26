@@ -1,0 +1,44 @@
+.audioButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.audioButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(233, 208, 149, 0.6);
+}
+
+.audioButton.playing {
+    animation: pulse-audio 2s infinite;
+}
+
+@keyframes pulse-audio {
+    0% {
+        box-shadow: 0 0 0 0 rgba(233, 208, 149, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(233, 208, 149, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(233, 208, 149, 0);
+    }
+}

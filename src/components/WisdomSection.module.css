@@ -1,0 +1,117 @@
+.wisdomSection {
+    position: relative;
+    padding: 100px 0;
+    background: linear-gradient(180deg,
+            var(--background-color) 0%,
+            rgba(233, 208, 149, 0.05) 50%,
+            var(--background-color) 100%);
+    overflow: hidden;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sectionTitle {
+    font-size: 3rem;
+    font-family: var(--font-cinzel);
+    margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-family: var(--font-inter);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.carouselContainer {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 2rem 0;
+    margin: 2rem 0;
+}
+
+.carouselContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.carouselTrack {
+    display: flex;
+    gap: 2rem;
+    padding: 0 2rem;
+    width: max-content;
+}
+
+.callToAction {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+.ctaText {
+    font-family: var(--font-inter);
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.ctaButton {
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #A01010 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(125, 9, 9, 0.3);
+}
+
+.ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(125, 9, 9, 0.4);
+    background: linear-gradient(135deg, #A01010 0%, var(--primary-color) 100%);
+}
+
+.ctaButton:active {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .wisdomSection {
+        padding: 60px 0;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .sectionSubtitle {
+        font-size: 1rem;
+    }
+
+    .carouselTrack {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .ctaText {
+        font-size: 1rem;
+    }
+
+    .ctaButton {
+        padding: 0.9rem 2rem;
+        font-size: 0.95rem;
+    }
+}

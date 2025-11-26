@@ -1,0 +1,144 @@
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.emblemContainer {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.emblem {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(233, 208, 149, 0.3));
+    animation: gentleFloat 3s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50px;
+    background: rgba(233, 208, 149, 0.1);
+    backdrop-filter: blur(5px);
+    margin-bottom: 2rem;
+}
+
+.badgeText {
+    font-family: var(--font-inter);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.title {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 400;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.description {
+    font-family: var(--font-inter);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.primaryButton {
+    padding: 1rem 2.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(125, 9, 9, 0.3);
+}
+
+.secondaryButton {
+    padding: 1rem 2.5rem;
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+    background: rgba(125, 9, 9, 0.05);
+}
+
+@media (max-width: 768px) {
+    .emblem {
+        width: 80px;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.8rem;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

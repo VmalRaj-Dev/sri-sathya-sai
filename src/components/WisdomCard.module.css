@@ -1,0 +1,119 @@
+.wisdomCard {
+    position: relative;
+    min-width: 350px;
+    max-width: 350px;
+    height: 400px;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 2px solid rgba(233, 208, 149, 0.4);
+    box-shadow: 0 10px 40px rgba(125, 9, 9, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+    scroll-snap-align: center;
+    overflow: hidden;
+}
+
+.wisdomCard:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 50px rgba(125, 9, 9, 0.18);
+    border-color: rgba(233, 208, 149, 0.6);
+}
+
+.gradientOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(233, 208, 149, 0.1) 0%,
+            transparent 50%,
+            rgba(125, 9, 9, 0.05) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wisdomCard:hover .gradientOverlay {
+    opacity: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.category {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: rgba(233, 208, 149, 0.3);
+    border-radius: 20px;
+    font-family: var(--font-inter);
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.quoteSymbolTop,
+.quoteSymbolBottom {
+    font-size: 3rem;
+    font-family: Georgia, serif;
+    color: var(--secondary-color);
+    line-height: 0.5;
+    opacity: 0.5;
+}
+
+.quoteSymbolTop {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.quoteSymbolBottom {
+    text-align: right;
+    margin-top: 1rem;
+    transform: rotate(180deg);
+}
+
+.quote {
+    font-family: var(--font-cinzel);
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    line-height: 1.7;
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+.author {
+    font-family: var(--font-inter);
+    font-size: 0.95rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .wisdomCard {
+        min-width: 280px;
+        max-width: 280px;
+        height: 350px;
+        padding: 2rem;
+    }
+
+    .quote {
+        font-size: 1rem;
+    }
+
+    .quoteSymbolTop,
+    .quoteSymbolBottom {
+        font-size: 2.5rem;
+    }
+}

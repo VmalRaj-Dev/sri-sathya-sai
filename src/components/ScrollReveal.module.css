@@ -1,0 +1,32 @@
+.reveal {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    will-change: opacity, transform;
+}
+
+/* Variants */
+.fadeUp {
+    transform: translateY(30px);
+}
+
+.fadeIn {
+    transform: translateY(0);
+}
+
+.scaleUp {
+    transform: scale(0.95);
+}
+
+.slideRight {
+    transform: translateX(-30px);
+}
+
+.slideLeft {
+    transform: translateX(30px);
+}
+
+/* Visible State */
+.visible {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}

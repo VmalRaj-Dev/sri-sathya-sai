@@ -1,0 +1,130 @@
+.timelineItem {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideInTimeline 0.6s ease-out forwards;
+}
+
+.timelineMarker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.yearCircle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #DAA520 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(233, 208, 149, 0.5);
+    position: relative;
+    z-index: 2;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+.year {
+    font-family: var(--font-cinzel);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.connectingLine {
+    width: 3px;
+    flex: 1;
+    background: linear-gradient(180deg,
+            var(--secondary-color) 0%,
+            rgba(233, 208, 149, 0.3) 100%);
+    margin-top: 0.5rem;
+    position: relative;
+    animation: growLine 0.8s ease-out forwards;
+    transform-origin: top;
+}
+
+.content {
+    flex: 1;
+    padding-top: 0.5rem;
+}
+
+.title {
+    font-family: var(--font-cinzel);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.description {
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+@keyframes slideInTimeline {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes growLine {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+/* Staggered animation delays */
+.timelineItem:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.timelineItem:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.timelineItem:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.timelineItem:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.timelineItem:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+@media (max-width: 768px) {
+    .timelineItem {
+        gap: 1rem;
+    }
+
+    .yearCircle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .year {
+        font-size: 0.85rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
