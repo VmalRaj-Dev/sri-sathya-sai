@@ -1,0 +1,165 @@
+.contactSection {
+    background: linear-gradient(180deg, #FFF5E6 0%, #FAF0E6 100%);
+    position: relative;
+    padding-bottom: 6rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.info {
+    padding-right: 2rem;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.detailItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    background: rgba(233, 208, 149, 0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.detailText h4 {
+    font-family: var(--font-inter);
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    color: var(--primary-color);
+}
+
+.detailText p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.formContainer {
+    padding: 3rem;
+    border-radius: 20px;
+    background: white;
+    /* fallback */
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(233, 208, 149, 0.2);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submitButton {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submitButton:hover {
+    background: #5a0606;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(125, 9, 9, 0.2);
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .info {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .detailItem {
+        flex-direction: column;
+        /* Ensure responsive alignment */
+        align-items: center;
+    }
+
+    /* Override flex-direction for detailItem to assume row in desktop but maybe row in mobile too if needed? 
+       Actually let's keep it nicer. */
+    .detailItem {
+        flex-direction: row;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .formContainer {
+        padding: 2rem;
+    }
+}

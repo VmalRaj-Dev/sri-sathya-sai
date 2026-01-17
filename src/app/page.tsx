@@ -13,6 +13,8 @@ import SevaModal from "@/components/SevaModal";
 import DivineParticles from "@/components/DivineParticles";
 import CursorTrail from "@/components/CursorTrail";
 import GoldenThread from "@/components/GoldenThread";
+import MagazineSection from "@/components/MagazineSection";
+import ContactSection from "@/components/ContactSection";
 
 // Data Definition
 const sevaData: SevaItem[] = [
@@ -210,11 +212,15 @@ export default function Home() {
       <GoldenThread />
       <BackgroundBlobs />
 
-      <ScrollReveal>
-        <Hero />
-      </ScrollReveal>
+      <div id="home">
+        <ScrollReveal>
+          <Hero />
+        </ScrollReveal>
+      </div>
 
-      <AboutSection />
+      <div id="about">
+        <AboutSection />
+      </div>
 
       <MissionSection />
 
@@ -227,7 +233,11 @@ export default function Home() {
         </ScrollReveal>
       </section>
 
+      <MagazineSection />
+
       <WisdomSection />
+
+      <ContactSection />
 
       <SevaModal
         isOpen={!!selectedSeva}

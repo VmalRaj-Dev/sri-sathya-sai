@@ -1,10 +1,40 @@
-import React from 'react';
+"use client";
+
+import React, { useState, useEffect } from 'react';
 import styles from './Hero.module.css';
 import ScrollReveal from './ScrollReveal';
 
 const Hero = () => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const images = [
+        "/images/hero/baba_1.png",
+        "/images/hero/baba_2.png",
+        "/images/hero/baba_3.png",
+        "/images/hero/baba_4.png",
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [images.length]);
+
     return (
         <section className={styles.hero}>
+            {/* Background Carousel */}
+            <div className={styles.carouselContainer}>
+                {images.map((img, index) => (
+                    <div
+                        key={index}
+                        className={`${styles.carouselImage} ${index === currentImageIndex ? styles.active : ''}`}
+                        style={{ backgroundImage: `url(${img})` }}
+                    />
+                ))}
+            </div>
+
             <div className={styles.content}>
                 <ScrollReveal variant="fade-up" delay="0.1s">
                     <div className={styles.emblemContainer}>
