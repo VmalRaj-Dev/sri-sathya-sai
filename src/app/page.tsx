@@ -213,9 +213,7 @@ export default function Home() {
       <BackgroundBlobs />
 
       <div id="home">
-        <ScrollReveal>
-          <Hero />
-        </ScrollReveal>
+        <Hero />
       </div>
 
       <div id="about">
