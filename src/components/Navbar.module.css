@@ -55,6 +55,13 @@
     width: auto;
 }
 
+.emblem {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(233, 208, 149, 0.3));
+    animation: gentleFloat 3s ease-in-out infinite;
+}
+
 .navLinks {
     display: flex;
     gap: 2rem;

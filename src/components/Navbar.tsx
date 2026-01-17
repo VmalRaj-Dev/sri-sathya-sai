@@ -42,7 +42,13 @@ const Navbar = () => {
             <div className={`container ${styles.container}`}>
                 <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className={styles.logo}>
                     {/* Placeholder for logo if needed */}
-                    <span>SSSM Trust</span>
+                    <div className={styles.emblemContainer}>
+                        <img
+                            src="/Red and Yellow Modern Shocking Moments.png"
+                            alt="Sri Sathya Sai Maruthi Seva Trust Emblem"
+                            className={styles.emblem}
+                        />
+                    </div>
                 </a>
 
                 <button
