@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Hero.module.css';
 import ScrollReveal from './ScrollReveal';
+import Image from 'next/image';
 
 const Hero = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -39,17 +40,26 @@ const Hero = () => {
                 <div className={styles.contentInner}>
                     <ScrollReveal variant="fade-up" delay="0.1s">
                         <div className={styles.emblemContainer}>
-                            <img
-                                src="/Red and Yellow Modern Shocking Moments.png"
+                            <Image
+                                src="/logo.png"
                                 alt="Sri Sathya Sai Maruthi Seva Trust Emblem"
                                 className={styles.emblem}
+                                width={120}
+                                height={120}
                             />
                         </div>
                     </ScrollReveal>
 
                     <ScrollReveal variant="fade-up" delay="0.2s">
-                        <div className={styles.badge}>
-                            <span className={styles.badgeText}>100 Years of Love</span>
+                        {/* Replaced Text Badge with Centenary Image */}
+                        <div className="flex justify-center mb-8">
+                            <Image
+                                src="/100years.png"
+                                alt="100 Years of Love"
+                                className={styles.centenaryLogo}
+                                width={400}
+                                height={200}
+                            />
                         </div>
                     </ScrollReveal>
 

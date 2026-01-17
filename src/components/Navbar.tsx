@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
+import Image from 'next/image';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -41,14 +42,13 @@ const Navbar = () => {
         <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={`container ${styles.container}`}>
                 <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className={styles.logo}>
-                    {/* Placeholder for logo if needed */}
-                    <div className={styles.emblemContainer}>
-                        <img
-                            src="/Red and Yellow Modern Shocking Moments.png"
-                            alt="Sri Sathya Sai Maruthi Seva Trust Emblem"
-                            className={styles.emblem}
-                        />
-                    </div>
+                    <Image
+                        src="/logo.png"
+                        alt="SSSM Logo"
+                        className={styles.emblem}
+                        width={100}
+                        height={100}
+                    />
                 </a>
 
                 <button

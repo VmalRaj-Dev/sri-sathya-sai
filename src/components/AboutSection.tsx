@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './AboutSection.module.css';
 import TimelineItem from './TimelineItem';
 import ScrollReveal from './ScrollReveal';
+import Image from 'next/image';
 
 const AboutSection = () => {
     const timelineData = [
@@ -56,10 +57,12 @@ const AboutSection = () => {
                     <ScrollReveal variant="slide-right" delay="0.2s">
                         <div className={styles.imageContainer}>
                             <div className={styles.imageWrapper}>
-                                <img
+                                <Image
                                     src="/sai_baba_portrait.png"
                                     alt="Sri Sathya Sai Baba"
                                     className={styles.portraitImage}
+                                    width={100}
+                                    height={100}
                                 />
                                 <div className={styles.imageGlow} />
                             </div>
@@ -100,10 +103,12 @@ const AboutSection = () => {
 
                         {/* Symbol/Emblem - Center */}
                         <div className={styles.symbolContainer}>
-                            <img
+                            <Image
                                 src="/WhatsApp Image 2025-11-25 at 13.11.42_c50f6af5.jpg"
                                 alt="Trust Symbol"
                                 className={styles.symbolImage}
+                                width={100}
+                                height={100}
                             />
                         </div>
 
@@ -111,10 +116,12 @@ const AboutSection = () => {
                         <ScrollReveal variant="scale-up" delay="0.5s">
                             <div className={styles.motherContainer}>
                                 <div className={styles.motherImageWrapper}>
-                                    <img
+                                    <Image
                                         src="/WhatsApp Image 2025-11-25 at 13.11.46_85ef570c.jpg"
                                         alt="Beloved Mother"
                                         className={styles.motherImage}
+                                        width={100}
+                                        height={100}
                                     />
                                     <div className={styles.motherGlow} />
                                 </div>
@@ -127,10 +134,12 @@ const AboutSection = () => {
                             <ScrollReveal variant="slide-right" delay="0.6s">
                                 <div className={styles.personCard}>
                                     <div className={styles.personImageWrapper}>
-                                        <img
-                                            src="/IMG_3990.JPG"
+                                        <Image
+                                            src="/mega-sai.jpg"
                                             alt="Brother"
                                             className={styles.personImage}
+                                            width={100}
+                                            height={100}
                                         />
                                     </div>
                                 </div>
@@ -139,10 +148,12 @@ const AboutSection = () => {
                             <ScrollReveal variant="slide-left" delay="0.7s">
                                 <div className={styles.personCard}>
                                     <div className={styles.personImageWrapper}>
-                                        <img
-                                            src="/17.jpg"
+                                        <Image
+                                            src="/navin-sai.jpg"
                                             alt="Brother"
                                             className={styles.personImage}
+                                            width={100}
+                                            height={100}
                                         />
                                     </div>
                                 </div>

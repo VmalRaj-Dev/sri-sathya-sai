@@ -50,16 +50,11 @@
     text-shadow: none;
 }
 
-.logoImage {
-    height: 40px;
-    width: auto;
-}
-
 .emblem {
-    width: 120px;
+    width: 60px;
+    /* Standard navbar logo size */
     height: auto;
-    filter: drop-shadow(0 4px 12px rgba(233, 208, 149, 0.3));
-    animation: gentleFloat 3s ease-in-out infinite;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .navLinks {

@@ -15,10 +15,8 @@
     left: 0;
     width: 100%;
     height: 30%;
-    /* Cover top area for navbar */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
     z-index: 2;
-    /* Ensure it's above images but index logic might need check, images are z-index -2? No, carousel is z-index 1. So this needs to be inside carousel logic or on top. */
     pointer-events: none;
 }
 
@@ -103,24 +101,15 @@
     }
 }
 
-.badge {
-    display: inline-block;
-    padding: 0.5rem 1.5rem;
-    border: 1px solid var(--secondary-color);
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(8px);
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.badgeText {
-    font-family: var(--font-inter);
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--primary-color);
-    font-weight: 600;
+.centenaryLogo {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    /* Adjust as needed */
+    margin: 0 auto 2rem;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
 .title {
@@ -209,5 +198,9 @@
 
     .content {
         padding: 4rem 1rem;
+    }
+
+    .centenaryLogo {
+        max-height: 150px;
     }
 }
